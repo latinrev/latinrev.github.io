@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title></title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/0f9bd82388.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <img class="logo" src="./imgs/Dishonored_Logo.png" alt="" />
+      </div>
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-list-element">
+            <a href="#" class="navbar-link">Dishonored</a>
+          </li>
+          <li class="navbar-list-element">
+            <a href="#personajes" class="navbar-link">Personajes</a>
+          </li>
+          <li class="navbar-list-element">
+            <a href="#sinopsis" class="navbar-link">Sinopsis</a>
+          </li>
+          <li class="navbar-list-element">
+            <a href="#mundo" class="navbar-link">Mundo</a>
+          </li>
+          <li class="navbar-list-element">
+            <a href="" class="navbar-link">Sinopsis</a>
+          </li>
+          <li class="navbar-list-element boletin">
+            <a href="#newsletter" class="navbar-link">Boletin</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="sticky-buttons">
+      <div class="left">
+        <a target = '_blank ' href="https://www.instagram.com/latinreve/" class="social-network fab fa-instagram "></a>
+        <a target = '_blank ' href="https://www.facebook.com/Joe.l.0121" class="social-network fab fa-facebook-f"></a>
+        <a target = '_blank ' href="mailto:latinreve@gmail.com" class="social-network fab fa-whatsapp"></a>
+      </div>
+    </div>
+    <a href="#" class="go-up">
+      <svg
+        width="24"
+        height="24"
+        xmlns="http://www.w3.org/2000/svg"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+      >
+        <path
+          d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"
+        />
+      </svg>
+    </a>
+    <div class="main-page">
+      <section class="dishonored-main " id="landing">
+        <div class="dis-paralax "></div>
+        <div class="disfondo-paralax  "></div>
+        <div class="hero-container">
+          <p class="hero-text">
+            Explora el mundo de Dunwall<br />Sobrevive la plaga<br />
+            Recupera tu honor<br />
+          </p>
+          <a class="btn btn-primary" href="#sinopsis">SABER MAS</a>
+        </div>
+      </section>
+
+      <section class="personajes container" id="personajes">
+        <div class="card">
+          <img src="./imgs/corvo.png" alt="" class="card-image" />
+          <div class="information">
+            <h3 class="name corvo">CORVO ATTANO</h3>
+          </div>
+          <div class="hover-information">
+            El antiguo protector de la Emperatriz, su supuesto amante, y durante
+            el transcurso de la historia un asesino enmascarado con poderes
+            sobrenaturales otorgados por El Forastero.
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./imgs/emily.png" alt="" class="card-image" />
+          <div class="information">
+            <h3 class="name emily">EMILY KALDWIN</h3>
+          </div>
+          <div class="hover-information">
+            Emily Kaldwin es la hija de la emperatriz Jessamine Kaldwin y la
+            legítima heredera al trono de Gristol y de todo el imperio de las
+            islas.
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./imgs/daud.png" alt="" class="card-image" />
+          <div class="information">
+            <h3 class="name daud">DAUD</h3>
+          </div>
+          <div class="hover-information">
+            Él es el líder de los Balleneros, una banda de asesinos que operan
+            en el barrio anegado de Dunwall. Fue él quien asesinó a la
+            emperatriz por orden del aquel entonces jefe real de espionaje.
+          </div>
+        </div>
+      </section>
+      <section class="sinopsis " id="sinopsis">
+        <h2 class="sinopsis-text container">
+          <span class="main-text"
+            >Dishonored se sitúa en el trasfondo de la ciudad de Dunwall y su
+            plaga de ratas<br /><br
+          /></span>
+          Siguiendo la historia de
+          <a href="#personajes" class="corvo"> Corvo Attano</a>, el último
+          guardaespaldas de la emperatriz la cual murio a manos de
+          <a href="#personajes" class="daud">Daud</a>,<br /><br />
+          Corvo es falsamente inculpado de la muerte de la emperatriz,
+          sentenciado a muerte y encarcelado a manos de Lord Regente, su
+          usurpador.<br /><br />
+          Impulsado por la venganza, y ayudado por una congregación de gente
+          leal a la antigua emperatriz, se escapa la prisión, y se convierte en
+          un asesino, eliminando a los usurpadores que se han hecho con el poder
+          e intentando encontrar a la hija secuestrada de la emperatriz,
+          <a href="#personajes" class="emily">Emily Kaldwin</a>.
+        </h2>
+      </section>
+      <section class="mundo" id="mundo">
+        <img src="./imgs/Map.jpeg" alt="" class="mundo-image" />
+      </section>
+      <section class="newsletter container" id="newsletter">
+        <h1 class="keep-updated">
+          ¡No te pierdas ninguna <span>noticia</span>! Subscribete a nuestro
+          <span>Boletin</span>
+        </h1>
+        <form class="news-form" action="" method="post">
+          <input type="text" class="input-box" placeholder="NAME" />
+          <input type="text" class="input-box" placeholder="EMAIL" />
+        </form>
+        <a href="#newsletter" class="submit-btn btn">¡SUBSCRIBIRSE!</a>
+      </section>
+      <footer class="footer">
+        <h6 class="footer-text">
+          Copyright &copy; 2020 By Bethesda. All rights reserved.
+        </h6>
+      </footer>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+  </body>
+</html>

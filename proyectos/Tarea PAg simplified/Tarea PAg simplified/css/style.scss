@@ -1,0 +1,166 @@
+@import "animations";
+@import "buttons";
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue|Muli|Work+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  //font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande"
+
+  //  font-family: 'Bebas Neue', cursive;
+
+  font-family: "Muli", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.index-container {
+  height: 85vh;
+  .header {
+    color: #000;
+    background: #fff;
+    height: 10vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.192);
+
+    .navbar {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 1.2em;
+      .nav-list {
+        list-style: none;
+        margin-left: 20px;
+        .nav-list-element {
+          font-family: "Work Sans", sans-serif;
+          display: inline-block;
+          padding: 10px 25px;
+          .nav-link {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}
+.kiwi-main{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+  .title{
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    font-size: 4em;
+  }
+  .kiwi-main-text{
+    font-size: 1.5em;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    padding: 20px 20px;
+    &::before{
+      content: '';
+      position: absolute;
+      background: rgba(161, 161, 161, 0.548);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+  }
+    span{
+      color:#747732;
+    }
+    
+
+
+  } 
+  .kiwi-main-image{
+    width: 55%;
+    position: absolute;
+    top: 60%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+
+  }
+  .extra-text{
+    position: absolute;
+    top: 90%;
+    left: 70%;
+    
+  }
+  .biologia{
+    width: 35%;
+    top: 50%;
+
+  }
+  .comportamiento{
+    width: 35%;
+    top: 50%;
+  }
+
+}
+.contactanos-container{
+  height: 100%;
+  .holder{
+    background: rgb(90, 187, 119);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.288);
+    width: 40%;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 100px 20px;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    margin: 0 auto;
+    
+  .contactanos-form{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    text-align: right;
+    gap:30px;
+    input{
+      display: block;
+      grid-column:  2/2;
+    }
+    label
+    {
+      grid-column: 1/1;
+    }
+  }
+  .btn{
+    width: 100%;
+    text-align: center; 
+    margin-top: 50px;
+
+  }
+}
+  
+
+}
+
+.footer{
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

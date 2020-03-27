@@ -1,0 +1,28 @@
+a:visited,
+a:link {
+  text-decoration: none;
+  color: #fff;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.primary {
+  background: #3D464A;
+
+  a{
+    color: #83FCE2;
+
+  }
+}
+
+.secondary {
+  background: #fff;
+  border: 1px solid #4AB09A;
+
+  a {
+    color: #2f2f2f;
+  }
+}

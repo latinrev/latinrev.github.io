@@ -1,0 +1,24 @@
+@mixin centerStyling {
+    text-align: center;
+}
+
+@mixin centerFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin borderRadiusWhite {
+    //background: #fff;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+@mixin elevate {
+    &:hover {
+        box-shadow: 0 0 10px .2px #fff;
+        background: #fff;
+        color: #000;
+    }
+}

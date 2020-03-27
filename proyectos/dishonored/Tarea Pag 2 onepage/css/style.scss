@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin:100i|Pathway+Gothic+One&display=swap");
+
+@mixin CenterFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+}
+
+$primaryColor: rgb(211, 190, 73);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+canvas {
+  display: block;
+}
+html {
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  height: 100vh;
+  scroll-behavior: smooth;
+
+  scroll-snap-type: mandatory;
+}
+
+body {
+  font-family: "Pathway Gothic One", sans-serif;
+  background-color: #222222;
+  overflow-x: hidden;
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+.btn {
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 5px 20px;
+  position: absolute;
+  transition: color 500ms ease-out, background-color 500ms ease-in-out,
+    box-shadow 1s ease-out;
+  background: rgba(153, 153, 153, 0.205);
+  &:hover {
+    color: #000;
+    box-shadow: 0px 0px 20px $primaryColor;
+    background-color: #fff;
+  }
+}
+
+.header {
+  height: 10vh;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  padding: 5px 10px;
+  justify-content: space-between;
+  text-transform: uppercase;
+  .logo-container {
+    width: 25%;
+    height: 100%;
+    .logo {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .navbar {
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    justify-self: flex-end;
+    &-list {
+      &-element {
+        display: inline-block;
+        padding: 10px 20px;
+        .navbar-link {
+          text-decoration: none;
+          color: #fff;
+          transition: color 250ms ease-in-out;
+          &:hover {
+            color: $primaryColor;
+          }
+          &::after {
+            display: block;
+            content: "";
+            width: 0;
+            height: 2px;
+            background: $primaryColor;
+            transition: width 150ms ease-in-out;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+      .boletin {
+        background-color: $primaryColor;
+        padding: 5px 15px;
+        transition: background-color 200ms ease-in-out;
+
+        .navbar-link {
+          color: #000;
+          &:hover {
+            color: #000;
+          }
+        }
+        &:hover {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.sticky-buttons {
+  position: fixed;
+  top: 60%;
+  z-index: 10;
+  background: url("./imgs/flechadrecha.png") no-repeat left;
+  &:hover {
+    .left {
+      .social-network {
+        transform: scale(1); 
+        &:hover{
+          background-color: #fff;
+        }
+
+      }
+      .fa-whatsapp:hover{
+        color: #25d366;
+      }
+      .fa-facebook-f:hover{
+        color: #3b5998;
+      }
+      .fa-instagram:hover{
+        color:#8a3ab9;
+      }
+    }
+  }
+  .hover-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 5;
+  }
+  .left {
+    .social-network {
+      transform: scale(0);
+      border-radius: 50%;
+      background-color: $primaryColor;
+      text-decoration: none;
+      color: #000;
+      width: 50px;
+      height: 50px;
+      margin: 20px 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 200ms ease-in-out, color 400ms ease-in-out, background-color 200ms ease-in-out;
+    }
+  }
+}
+.go-up {
+  position: fixed;
+  top: 85%;
+  left: 90%;
+  z-index: 5;
+  border-radius: 50%;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.main-page {
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  .dishonored-main {
+    width: 100vw;
+    padding-top: 0px;
+    padding-bottom: 0;
+    height: 90vh;
+
+    .dis-paralax {
+      background: url("./imgs/dis.png") no-repeat right;
+      background-size: contain;
+      height: 90vh;
+      width: 100%;
+      position: absolute;
+    }
+    .disfondo-paralax {
+      background: url("./imgs/disfondo.png") no-repeat;
+      background-size: cover;
+      background-position: right;
+      background-attachment: fixed;
+      height: 90vh;
+      width: 100%;
+    }
+    .hero-text {
+      position: absolute;
+      top: 45%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 3em;
+      padding: 20px 0;
+      text-transform: uppercase;
+    }
+    .btn {
+      position: absolute;
+      top: 65%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      font-size: 2em;
+      cursor: pointer;
+    }
+  }
+}
+.personajes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card {
+    border-radius: 10px;
+    display: inline-block;
+    height: 90vh;
+    //background: linear-gradient(-45deg, rgb(153, 128, 45),rgb(201, 184, 87));
+    background-color: rgb(3, 3, 3);
+    margin: 0 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
+    position: relative;
+
+    &-image {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      height: 90%;
+      border-bottom: 0px;
+      opacity: 1;
+      transition: opacity 500ms ease-in-out;
+    }
+    .information {
+      color: #fff;
+
+      .name {
+        font-size: 2em;
+      }
+    }
+    .hover-information {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      padding: 10px 20px;
+      opacity: 0;
+      transition: opacity 500ms ease-in-out;
+      color: #fff;
+      font-size: 1.2em;
+    }
+    &:hover {
+      .hover-information {
+        opacity: 1;
+      }
+      .card-image {
+        background: #fff;
+        opacity: 0.4;
+      }
+      .corvo {
+        color: rgb(97, 132, 247);
+      }
+      .daud {
+        color: rgb(252, 82, 82);
+      }
+      .emily {
+        color: $primaryColor;
+      }
+      .corvo,
+      .emily,
+      .daud {
+        transition: color 500ms ease-in-out;
+      }
+    }
+  }
+}
+
+.sinopsis {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+    url("./imgs/dunwall.jpg") center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-text {
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+    font-size: 1.5em;
+
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 100;
+    .main-text {
+      font-size: 2em;
+      font-family: "Pathway Gothic One", sans-serif;
+    }
+    .corvo {
+      color: rgb(97, 132, 247);
+    }
+    .daud {
+      color: rgb(252, 82, 82);
+    }
+    .emily {
+      color: $primaryColor;
+    }
+  }
+}
+.mundo {
+  padding: 0;
+  &-image {
+    width: 100%;
+    height: 100%;
+  }
+}
+.newsletter {
+  height: 40vh;
+  position: relative;
+  text-transform: uppercase;
+  color: #fff;
+  width: 100vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./imgs/backgroundnews.jpg") center no-repeat;
+  background-attachment: fixed;
+  opacity: 1;
+  .keep-updated {
+    font-size: 2em;
+    margin-bottom: 20px;
+    span {
+      color: $primaryColor;
+    }
+  }
+  .news-form {
+    .input-box {
+      color: $primaryColor;
+      text-align: center;
+      border: none;
+      background: transparent;
+      border-bottom: 2px solid #fff;
+      font-size: 1.2em;
+      width: 30%;
+      height: 50px;
+      display: inline-block;
+      margin: 10px 20px;
+      transition: border-bottom 200ms ease-in-out, color 500ms ease-out;
+      &:focus {
+        color: #fff;
+        border-bottom: 2px solid $primaryColor;
+      }
+    }
+  }
+  .btn {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+  }
+}
+.footer{
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

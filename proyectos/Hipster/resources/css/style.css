@@ -1,0 +1,441 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  src: url("./fonts/code/codel.otf");
+  font-family: codel;
+}
+
+@font-face {
+  src: url("./fonts/code/codeb.otf");
+  font-family: codeB;
+}
+
+body {
+  font-family: "codel";
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+}
+
+.logo-container {
+  width: 400px;
+  height: 50px;
+  margin-left: 40px;
+  margin-top: 15px;
+  position: absolute;
+}
+
+.logo-container .logo-image {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-primary {
+  height: 10vh;
+  width: 100vw;
+  max-width: 100%;
+  background: #000000;
+  padding: 20px;
+}
+
+.navbar-primary .navbar-list {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  text-align: right;
+}
+
+.navbar-primary .navbar-list .navbar-element {
+  font-size: 30px;
+  display: inline-block;
+  text-align: right;
+  padding: 20px 10px;
+}
+
+.navbar-primary .navbar-list .navbar-element .navbar-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.home {
+  height: 90vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.13)), to(rgba(0, 0, 0, 0.116))), url("./images/1.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.116)), url("./images/1.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.home .hero-text-container {
+  font-family: "codeb";
+  padding: 50px;
+  height: 90vh;
+  position: absolute;
+  top: 55%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  background: rgba(0, 0, 0, 0.425);
+  font-size: 35px;
+  text-align: center;
+  min-width: 50%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .btn {
+  padding: 10px 70px;
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 40px;
+  background: rgba(0, 0, 0, 0.767);
+  font-family: "codeb";
+}
+
+.home .btn .btn-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.tiendafisica {
+  font-family: "codeb";
+  height: 100vh;
+}
+
+.tiendafisica .title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 15%;
+}
+
+.tiendafisica .title-container .main-title {
+  width: 35vw;
+  background: #000;
+  color: #1ebcec;
+  z-index: 2;
+}
+
+.tiendafisica .title-container .secondary-title {
+  z-index: 2;
+  width: 65vw;
+  background: #fff;
+}
+
+.tiendafisica .title-container .main-title,
+.tiendafisica .title-container .secondary-title {
+  height: 100%;
+  display: inline-block;
+  padding: 20px;
+  font-size: 50px;
+  text-align: center;
+  border-top: 30px solid #000;
+  border-bottom: 3px solid #000;
+}
+
+.tiendafisica .tiendafisica-mainframe {
+  height: 85%;
+  max-width: 100%;
+  background: #f0f0f0;
+  margin: 0 auto;
+  padding: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.562)), to(rgba(0, 0, 0, 0.507))), url("./images/2.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.507)), url("./images/2.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  font-size: 35px;
+}
+
+.tiendafisica .tiendafisica-mainframe .mainframe-container {
+  height: 100%;
+  padding: 20px;
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.tiendafisica .tiendafisica-mainframe .mainframe-container .mainframe-title {
+  text-align: center;
+  color: #fff;
+}
+
+.tiendafisica .tiendafisica-mainframe .mainframe-container .mainframe-subtitle {
+  font-family: "codel";
+  text-align: right;
+  padding: 20px;
+}
+
+.catalogo {
+  height: 180vh;
+}
+
+.catalogo .title-container {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.catalogo .title-container .main-title {
+  font-family: "codeb";
+  color: #1ebcec;
+  background: #000;
+  font-size: 50px;
+  padding: 20px;
+}
+
+.catalogo .catalogo-mainframe {
+  height: 70vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.527)), to(rgba(0, 0, 0, 0.534))), url("./images/3.png") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.534)), url("./images/3.png") no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  color: #fff;
+}
+
+.catalogo .catalogo-mainframe .catalogo-title {
+  position: absolute;
+  top: 40%;
+  left: 80%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 60px;
+}
+
+.catalogo .catalogo-mainframe .catalogo-descripcion {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 60px;
+}
+
+.catalogo .catalogo-mainframe .catalogo-descripcion .org-text {
+  color: #1ebcec;
+}
+
+.catalogo .tienda-container {
+  width: 100vw;
+  max-width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.catalogo .tienda-container .producto-container {
+  width: 28%;
+  margin: 10px 20px;
+  display: inline-block;
+}
+
+.catalogo .tienda-container .producto-container .producto-image-container {
+  width: 100%;
+  height: 500px;
+}
+
+.catalogo .tienda-container .producto-container .producto-image-container .producto-image {
+  width: 100%;
+  height: 100%;
+}
+
+.catalogo .tienda-container .producto-container .producto-title {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.catalogo .tienda-container .producto-container .producto-price {
+  font-family: "codeb";
+}
+
+.catalogo .tienda-container .producto-container .producto-title,
+.catalogo .tienda-container .producto-container .producto-price,
+.catalogo .tienda-container .producto-container .producto-colores-title {
+  text-align: right;
+  font-size: 25px;
+}
+
+.historia {
+  background: #f8f8f8;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.historia .title-container {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.historia .title-container .main-title {
+  font-family: "codeb";
+  color: #1ebcec;
+  background: #000;
+  font-size: 50px;
+  padding: 20px;
+  padding-left: 150px;
+}
+
+.historia .historia-container {
+  width: 90vw;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  font-size: 30px;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.historia .historia-container .historia-descripcion {
+  font-family: "codeb";
+  font-size: 40px;
+  max-height: 100%;
+}
+
+.historia .historia-container .historia-image-container {
+  display: inline-block;
+  width: 40vw;
+  z-index: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.historia .historia-container .historia-image-container .historia-image {
+  width: 100%;
+  height: 100%;
+}
+
+.newsletter {
+  padding: 20px;
+  text-align: center;
+  font-family: "codel";
+  height: 30vh;
+  position: relative;
+  text-transform: uppercase;
+  color: #fff;
+  width: 100vw;
+  max-width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("./images/1.jpg") center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/1.jpg") center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 1;
+}
+
+.newsletter .keep-updated {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.newsletter .keep-updated span {
+  color: #fff;
+}
+
+.newsletter .news-form .input-box {
+  color: #fff;
+  text-align: center;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #fff;
+  font-size: 1.2em;
+  width: 30%;
+  height: 50px;
+  display: inline-block;
+  margin: 10px 20px;
+  -webkit-transition: border-bottom 200ms ease-in-out, color 500ms ease-out;
+  transition: border-bottom 200ms ease-in-out, color 500ms ease-out;
+}
+
+.newsletter .news-form .input-box:focus {
+  color: #1ebcec;
+  border-bottom: 2px solid #1ebcec;
+}
+
+.newsletter .btn {
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 5px 20px;
+  position: absolute;
+  -webkit-transition: color 500ms ease-out, background-color 500ms ease-in-out, -webkit-box-shadow 1s ease-out;
+  transition: color 500ms ease-out, background-color 500ms ease-in-out, -webkit-box-shadow 1s ease-out;
+  transition: color 500ms ease-out, background-color 500ms ease-in-out, box-shadow 1s ease-out;
+  transition: color 500ms ease-out, background-color 500ms ease-in-out, box-shadow 1s ease-out, -webkit-box-shadow 1s ease-out;
+  background: rgba(153, 153, 153, 0.205);
+}
+
+.newsletter .btn:hover {
+  color: #1ebcec;
+  -webkit-box-shadow: 0px 0px 20px #fff;
+          box-shadow: 0px 0px 20px #fff;
+  background-color: #fff;
+}
+
+.footer {
+  font-family: "codeb";
+  color: #000;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffffff;
+}
+
+.footer .social-network {
+  border-radius: 50%;
+  text-decoration: none;
+  color: #000;
+  font-size: 40px;
+  margin: 20px 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: color 400ms ease-in-out, background-color 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  transition: color 400ms ease-in-out, background-color 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, color 400ms ease-in-out, background-color 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, color 400ms ease-in-out, background-color 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,473 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin:100i|Pathway+Gothic+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+canvas {
+  display: block;
+}
+
+html {
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  height: 100vh;
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: mandatory;
+      scroll-snap-type: mandatory;
+}
+
+body {
+  font-family: "Pathway Gothic One", sans-serif;
+  background-color: #222222;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.btn {
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 5px 20px;
+  position: absolute;
+  -webkit-transition: color 500ms ease-out, background-color 500ms ease-in-out, -webkit-box-shadow 1s ease-out;
+  transition: color 500ms ease-out, background-color 500ms ease-in-out, -webkit-box-shadow 1s ease-out;
+  transition: color 500ms ease-out, background-color 500ms ease-in-out, box-shadow 1s ease-out;
+  transition: color 500ms ease-out, background-color 500ms ease-in-out, box-shadow 1s ease-out, -webkit-box-shadow 1s ease-out;
+  background: rgba(153, 153, 153, 0.205);
+}
+
+.btn:hover {
+  color: #000;
+  -webkit-box-shadow: 0px 0px 20px #d3be49;
+          box-shadow: 0px 0px 20px #d3be49;
+  background-color: #fff;
+}
+
+.header {
+  height: 10vh;
+  background-color: rgba(255, 255, 255, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.header .logo-container {
+  width: 25%;
+  height: 100%;
+}
+
+.header .logo-container .logo {
+  width: 100%;
+  height: 100%;
+}
+
+.header .navbar {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  justify-self: flex-end;
+}
+
+.header .navbar-list-element {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.header .navbar-list-element .navbar-link {
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: color 250ms ease-in-out;
+  transition: color 250ms ease-in-out;
+}
+
+.header .navbar-list-element .navbar-link:hover {
+  color: #d3be49;
+}
+
+.header .navbar-list-element .navbar-link::after {
+  display: block;
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #d3be49;
+  -webkit-transition: width 150ms ease-in-out;
+  transition: width 150ms ease-in-out;
+}
+
+.header .navbar-list-element .navbar-link:hover::after {
+  width: 100%;
+}
+
+.header .navbar-list .boletin {
+  background-color: #d3be49;
+  padding: 5px 15px;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+.header .navbar-list .boletin .navbar-link {
+  color: #000;
+}
+
+.header .navbar-list .boletin .navbar-link:hover {
+  color: #000;
+}
+
+.header .navbar-list .boletin:hover {
+  background-color: #fff;
+}
+
+.sticky-buttons {
+  position: fixed;
+  top: 60%;
+  z-index: 10;
+  background: url("./imgs/flechadrecha.png") no-repeat left;
+}
+
+.sticky-buttons:hover .left .social-network {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.sticky-buttons:hover .left .social-network:hover {
+  background-color: #fff;
+}
+
+.sticky-buttons:hover .left .fa-whatsapp:hover {
+  color: #25d366;
+}
+
+.sticky-buttons:hover .left .fa-facebook-f:hover {
+  color: #3b5998;
+}
+
+.sticky-buttons:hover .left .fa-instagram:hover {
+  color: #8a3ab9;
+}
+
+.sticky-buttons .hover-arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  z-index: 5;
+}
+
+.sticky-buttons .left .social-network {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  border-radius: 50%;
+  background-color: #d3be49;
+  text-decoration: none;
+  color: #000;
+  width: 50px;
+  height: 50px;
+  margin: 20px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: color 400ms ease-in-out, background-color 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  transition: color 400ms ease-in-out, background-color 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, color 400ms ease-in-out, background-color 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, color 400ms ease-in-out, background-color 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.go-up {
+  position: fixed;
+  top: 85%;
+  left: 90%;
+  z-index: 5;
+  border-radius: 50%;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section {
+  height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.main-page {
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+.main-page .dishonored-main {
+  width: 100vw;
+  padding-top: 0px;
+  padding-bottom: 0;
+  height: 90vh;
+}
+
+.main-page .dishonored-main .dis-paralax {
+  background: url("./imgs/dis.png") no-repeat right;
+  background-size: contain;
+  height: 90vh;
+  width: 100%;
+  position: absolute;
+}
+
+.main-page .dishonored-main .disfondo-paralax {
+  background: url("./imgs/disfondo.png") no-repeat;
+  background-size: cover;
+  background-position: right;
+  background-attachment: fixed;
+  height: 90vh;
+  width: 100%;
+}
+
+.main-page .dishonored-main .hero-text {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 3em;
+  padding: 20px 0;
+  text-transform: uppercase;
+}
+
+.main-page .dishonored-main .btn {
+  position: absolute;
+  top: 65%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.personajes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.personajes .card {
+  border-radius: 10px;
+  display: inline-block;
+  height: 90vh;
+  background-color: #030303;
+  margin: 0 40px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
+  position: relative;
+}
+
+.personajes .card-image {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 90%;
+  border-bottom: 0px;
+  opacity: 1;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+
+.personajes .card .information {
+  color: #fff;
+}
+
+.personajes .card .information .name {
+  font-size: 2em;
+}
+
+.personajes .card .hover-information {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 10px 20px;
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.personajes .card:hover .hover-information {
+  opacity: 1;
+}
+
+.personajes .card:hover .card-image {
+  background: #fff;
+  opacity: 0.4;
+}
+
+.personajes .card:hover .corvo {
+  color: #6184f7;
+}
+
+.personajes .card:hover .daud {
+  color: #fc5252;
+}
+
+.personajes .card:hover .emily {
+  color: #d3be49;
+}
+
+.personajes .card:hover .corvo,
+.personajes .card:hover .emily,
+.personajes .card:hover .daud {
+  -webkit-transition: color 500ms ease-in-out;
+  transition: color 500ms ease-in-out;
+}
+
+.sinopsis {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.2))), url("./imgs/dunwall.jpg") center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url("./imgs/dunwall.jpg") center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sinopsis-text {
+  color: white;
+  margin: 0 auto;
+  font-size: 1.5em;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 100;
+}
+
+.sinopsis-text .main-text {
+  font-size: 2em;
+  font-family: "Pathway Gothic One", sans-serif;
+}
+
+.sinopsis-text .corvo {
+  color: #6184f7;
+}
+
+.sinopsis-text .daud {
+  color: #fc5252;
+}
+
+.sinopsis-text .emily {
+  color: #d3be49;
+}
+
+.mundo {
+  padding: 0;
+}
+
+.mundo-image {
+  width: 100%;
+  height: 100%;
+}
+
+.newsletter {
+  height: 40vh;
+  position: relative;
+  text-transform: uppercase;
+  color: #fff;
+  width: 100vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("./imgs/backgroundnews.jpg") center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./imgs/backgroundnews.jpg") center no-repeat;
+  background-attachment: fixed;
+  opacity: 1;
+}
+
+.newsletter .keep-updated {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.newsletter .keep-updated span {
+  color: #d3be49;
+}
+
+.newsletter .news-form .input-box {
+  color: #d3be49;
+  text-align: center;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #fff;
+  font-size: 1.2em;
+  width: 30%;
+  height: 50px;
+  display: inline-block;
+  margin: 10px 20px;
+  -webkit-transition: border-bottom 200ms ease-in-out, color 500ms ease-out;
+  transition: border-bottom 200ms ease-in-out, color 500ms ease-out;
+}
+
+.newsletter .news-form .input-box:focus {
+  color: #fff;
+  border-bottom: 2px solid #d3be49;
+}
+
+.newsletter .btn {
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.5em;
+}
+
+.footer {
+  height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */

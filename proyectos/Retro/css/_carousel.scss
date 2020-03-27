@@ -1,0 +1,81 @@
+.carousel {
+    overflow: hidden;
+    position: relative;
+    .back-button,
+    .forward-button {
+      z-index: 2;
+      position: absolute;
+      font-size: 2em;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      padding: 5px;
+      height: 50px;
+      width: 50px;
+      background: rgba(255, 255, 255, 0.356);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .back-button {
+      top: 50%;
+      left: 3%;
+    }
+    .forward-button {
+      top: 50%;
+      left: 97%;
+    }
+    .images-container {
+      display: grid;
+      grid-auto-flow: column;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      transition: transform 500ms;
+      transform: translateX(0);
+
+      .img-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        object-fit: cover;
+
+        &:hover {
+          .info {
+            opacity: 1;
+          }
+          .img-carousel {
+            transform: scale(1.5);
+          }
+        }
+        .img-carousel {
+          object-fit: cover;
+
+          width: 100%;
+          height: 100%;
+          transition: 0.5s transform ease-in-out;
+        }
+        .info {
+          opacity: 0;
+          position: absolute;
+          width: 100%;
+          top: 90%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+          background: rgba(0, 0, 0, 0.747);
+          color: #fff;
+          transition: 0.5s opacity ease-in-out;
+          font-family: "Courier New", Courier, monospace;
+          .download-link {
+            color: #fff;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }

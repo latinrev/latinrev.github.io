@@ -1,0 +1,407 @@
+@import "_funcs.scss";
+
+$primaryColor: #ec881e;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  src: url("./fonts/code/codel.otf");
+  font-family: codel;
+}
+@font-face {
+  src: url("./fonts/code/codeb.otf");
+  font-family: codeB;
+}
+
+body {
+  font-family: "codel";
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+}
+
+.logo-container {
+  width: 200px;
+  height: 100px;
+  margin-left: 40px;
+  .logo-image {
+    width: 100%;
+    height: 100%;
+  }
+  position: absolute;
+}
+.navbar-primary {
+  height: 10vh;
+  width: 100vw;
+  max-width: 100%;
+  background: #000000;
+  .navbar-list {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .navbar-element {
+      font-size: 35px;
+      display: inline-block;
+      width: 33%;
+      text-align: center;
+      .navbar-link {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.navbar-secondary {
+  height: 10vh;
+  width: 100vw;
+  background: #fff;
+  text-align: right;
+  max-width: 100%;
+
+  .navbar-list {
+    padding: 20px;
+    margin-right: 30px;
+
+    .navbar-element {
+      display: inline-block;
+      padding: 15px 20px;
+      font-size: 35px;
+      border: 1px solid #000;
+      margin-left: 60px;
+      .navbar-link {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.home {
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.116)),
+    url("./images/1.jpg") no-repeat center;
+  background-size: cover;
+
+  .hero-text-container {
+    padding: 50px;
+    position: absolute;
+    top: 55%;
+    left: 0;
+    transform: translate(0, -50%);
+    background: url("./images/herotext.png") no-repeat center;
+    font-size: 35px;
+    text-align: center;
+    min-width: 40%;
+  }
+  .btn {
+    padding: 10px 70px;
+    position: absolute;
+    top: 62%;
+    left: 0;
+    font-size: 40px;
+    background: rgba(0, 0, 0, 0.767);
+    font-family: "codeb";
+    .btn-link {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+.tiendafisica {
+  font-family: "codeb";
+  height: 100vh;
+  .title-container {
+    display: flex;
+    align-items: center;
+    height: 15%;
+    .main-title {
+      width: 35vw;
+      background: #000;
+      color: $primaryColor;
+    }
+    .secondary-title {
+      width: 65vw;
+    }
+    .main-title,
+    .secondary-title {
+      height: 100%;
+
+      display: inline-block;
+      padding: 20px;
+      font-size: 50px;
+      text-align: center;
+      border-top: 30px solid #000;
+      border-bottom: 3px solid #000;
+    }
+  }
+  .tiendafisica-mainframe {
+    height: 85%;
+    max-width: 100%;
+    background: #f0f0f0;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.507)),
+      url("./images/2.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    font-size: 35px;
+    .mainframe-container {
+      height: 100%;
+      padding: 20px;
+      width: 50vw;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap-reverse;
+      .mainframe-title {
+        text-align: center;
+        color: #fff;
+      }
+      .mainframe-subtitle {
+        font-family: "codel";
+        text-align: right;
+        padding: 20px;
+      }
+    }
+  }
+}
+.catalogo {
+  height: 250vh;
+  .title-container {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    .main-title {
+      font-family: "codeb";
+
+      color: $primaryColor;
+      background: #000;
+      font-size: 50px;
+      padding: 20px;
+    }
+    .male-female {
+      position: absolute;
+      top: 50%;
+      left: 85%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 70px;
+    }
+  }
+  .catalogo-mainframe {
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.534)),
+      url("./images/3.png") no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    color: #fff;
+    .catalogo-title {
+      position: absolute;
+      top: 20%;
+      left: 80%;
+      transform: translate(-50%, -50%);
+      font-size: 60px;
+    }
+    .catalogo-descripcion {
+      position: absolute;
+      top: 70%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      font-size: 60px;
+      .org-text {
+        color: $primaryColor;
+      }
+    }
+  }
+  .tienda-container {
+    width: 100vw;
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+    .producto-container {
+      width: 28%;
+      margin: 10px 20px;
+      display: inline-block;
+      .producto-image-container {
+        width: 100%;
+        height: 500px;
+        .producto-image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .producto-title {
+        width: 100%;
+        margin-top: 20px;
+      }
+      .producto-price {
+        font-family: "codeb";
+      }
+      .producto-colores-title {
+      }
+      .producto-title,
+      .producto-price,
+      .producto-colores-title {
+        text-align: right;
+        font-size: 25px;
+      }
+      .colores-disponibles {
+        text-align: right;
+
+        .rojo {
+          width: 30px;
+          height: 30px;
+          background-color: #661515;
+        }
+        .verde {
+          width: 30px;
+          height: 30px;
+          background-color: #27661b;
+        }
+        .amarillo {
+          width: 30px;
+          height: 30px;
+          background-color: #8b8a22;
+        }
+        .rojo,
+        .verde,
+        .amarillo {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+.historia {
+  background:#f8f8f8;
+  height: 100vh;
+  .title-container {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    .main-title {
+      font-family: "codeb";
+
+      color: $primaryColor;
+      background: #000;
+      font-size: 50px;
+      padding: 20px;
+      padding-left: 150px;
+    }
+  }
+  .historia-container {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 30px;
+    margin-top: 50px;
+    padding: 20px;
+    .historia-descripcion {
+      font-family: "codeb";
+      font-size: 60px;
+    }
+    .historia-image-container {
+      display: inline-block;
+      width: 40vw;
+
+      .historia-image {
+        width: 100%;
+      }
+    }
+    .historia-misiones-container {
+      .mision-container {
+        .mision-icon {
+        }
+        .mision-title {
+        }
+        .mision.description {
+        }
+      }
+    }
+  }
+}
+.newsletter {
+  padding: 20px;
+  text-align: center;
+  font-family: "codel";
+  height: 30vh;
+  position: relative;
+  text-transform: uppercase;
+  color: #fff;
+  width: 100vw;
+  max-width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./images/1.jpg") center;
+    background-size: cover;
+  background-attachment: fixed;
+  opacity: 1;
+  .keep-updated {
+    font-size: 2em;
+    margin-bottom: 20px;
+    span {
+      color: #fff;
+    }
+  }
+  .news-form {
+    .input-box {
+      color: #fff;
+      text-align: center;
+      border: none;
+      background: transparent;
+      border-bottom: 2px solid #fff;
+      font-size: 1.2em;
+      width: 30%;
+      height: 50px;
+      display: inline-block;
+      margin: 10px 20px;
+      transition: border-bottom 200ms ease-in-out, color 500ms ease-out;
+      &:focus {
+        color: $primaryColor;
+        border-bottom: 2px solid $primaryColor;
+      }
+    }
+  }
+  .btn {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 5px 20px;
+    position: absolute;
+    transition: color 500ms ease-out, background-color 500ms ease-in-out,
+      box-shadow 1s ease-out;
+    background: rgba(153, 153, 153, 0.205);
+    &:hover {
+      color: $primaryColor;
+      box-shadow: 0px 0px 20px #fff;
+      background-color: #fff;
+    }
+  }
+}
+.footer{
+  font-family: 'codeb';
+  color: #000;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  .social-network {
+    border-radius: 50%;
+    text-decoration: none;
+    color: #000;
+    font-size: 40px;
+    margin: 20px 50px;
+    justify-content: center;
+    align-items: center;
+    transition: transform 200ms ease-in-out, color 400ms ease-in-out, background-color 200ms ease-in-out;
+  }
+}
