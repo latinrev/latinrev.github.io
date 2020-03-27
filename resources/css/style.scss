@@ -169,6 +169,8 @@ header {
 .skills-section {
   font-family: "CustomFont2";
   height: 100vh;
+  overflow: hidden;
+
 }
 
 .portfolio-section {
@@ -199,10 +201,11 @@ header {
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .portfolio-image-container {
-  width: 70%;
+  width: 55%;
   max-width: 70%;
   padding-top: 50px;
   margin: 0 auto;
